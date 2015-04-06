@@ -11,7 +11,7 @@ Make sure that [of][1] and ofApp share the same folder.
 
 Change directory to ofApp and perform one of these steps:
 
-For Linux build:
+For Linux Release build:
 ```bash
 mkdir build
 cd build
@@ -19,7 +19,7 @@ cmake .. -G Ninja -DCMAKE_CXX_COMPILER=clang++
 ninja
 ```
 
-For Debug build:
+For Linux Debug build:
 ```bash
 mkdir build
 cd build
@@ -27,7 +27,7 @@ cmake .. -G Ninja -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=Debug
 ninja
 ```
 
-For Windows build:
+For Windows Release build:
 ```bash
 mkdir build
 cd build
@@ -35,6 +35,13 @@ cmake .. -G Ninja -DCMAKE_TOOLCHAIN_FILE=`find /opt/mxe -name mxe-conf.cmake`
 ninja
 ```
 
+For Windows Debug build:
+```bash
+mkdir build
+cd build
+cmake .. -G Ninja -DCMAKE_TOOLCHAIN_FILE=`find /opt/mxe -name mxe-conf.cmake` -DCMAKE_BUILD_TYPE=Debug
+ninja
+```
 
 [ofTools][2]
 ------------
