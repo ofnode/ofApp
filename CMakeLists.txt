@@ -17,14 +17,13 @@ set(SOURCES
 add_executable(
     ${APP}
     ${SOURCES}
+    ${OFXADDONS_SOURCES}
 )
 
 target_link_libraries(
     ${APP}
-    ${OFXADDONS_BEGIN}
-    ${OFXADDONS_LIBRARIES}
-    ${OFXADDONS_END}
     ${OPENFRAMEWORKS_LIBRARIES}
 )
 
 cotire(${APP})
+
