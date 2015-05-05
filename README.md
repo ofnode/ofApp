@@ -23,6 +23,7 @@ See also
 --------
 
 [Compiling ofApp with IDE on Linux](https://github.com/ofnode/of/wiki/Compiling-ofApp-with-IDE-on-Linux)
+--------------------------------------------------------------------------------------------------------
 
 [ofTools](https://github.com/ofnode/ofTools)
 --------------------------------------------
