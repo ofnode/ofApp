@@ -1,7 +1,8 @@
 *~
 *.txt.user
+*.DS_Store
 
-build*/*
-debug*/*
+build/*
+debug/*
 
 bin/
