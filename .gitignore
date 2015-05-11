@@ -4,5 +4,4 @@
 build*/*
 debug*/*
 
-bin/*
-!/bin/data/
+bin/
