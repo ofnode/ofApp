@@ -1,11 +1,9 @@
-cmake_minimum_required(VERSION 2.8)
-
 project(ofApp)
 set(APP ofApp)
 
-list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/../of)
+cmake_minimum_required(VERSION 2.8)
 
-include(openFrameworks)
+include(../of/openFrameworks.cmake)
 
 #ofxaddon()
 
