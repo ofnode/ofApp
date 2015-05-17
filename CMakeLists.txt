@@ -14,6 +14,7 @@ set(SOURCES
 
 add_executable(
     ${APP}
+    MACOSX_BUNDLE
     ${SOURCES}
     ${OFXADDONS_SOURCES}
 )
@@ -24,4 +25,3 @@ target_link_libraries(
 )
 
 cotire(${APP})
-
