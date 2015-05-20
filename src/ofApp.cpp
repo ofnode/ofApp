@@ -52,11 +52,11 @@ void ofApp::mouseExited(ofMouseEventArgs& mouse)
 {
 }
 
-void ofApp::touchDown(ofTouchEventArgs& touch)
+void ofApp::touchMoved(ofTouchEventArgs& touch)
 {
 }
 
-void ofApp::touchMoved(ofTouchEventArgs& touch)
+void ofApp::touchDown(ofTouchEventArgs& touch)
 {
 }
 

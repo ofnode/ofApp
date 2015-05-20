@@ -21,8 +21,8 @@ class ofApp : public ofBaseApp
     void mouseEntered    (ofMouseEventArgs&);
     void mouseExited     (ofMouseEventArgs&);
 
-    void touchDown       (ofTouchEventArgs&);
     void touchMoved      (ofTouchEventArgs&);
+    void touchDown       (ofTouchEventArgs&);
     void touchUp         (ofTouchEventArgs&);
     void touchDoubleTap  (ofTouchEventArgs&);
     void touchCancelled  (ofTouchEventArgs&);
