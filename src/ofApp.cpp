@@ -40,14 +40,46 @@ void ofApp::mouseReleased(ofMouseEventArgs& mouse)
 {
 }
 
+void ofApp::mouseScrolled(ofMouseEventArgs& mouse)
+{
+}
+
+void ofApp::mouseEntered(ofMouseEventArgs& mouse)
+{
+}
+
+void ofApp::mouseExited(ofMouseEventArgs& mouse)
+{
+}
+
+void ofApp::touchDown(ofTouchEventArgs& touch)
+{
+}
+
+void ofApp::touchMoved(ofTouchEventArgs& touch)
+{
+}
+
+void ofApp::touchUp(ofTouchEventArgs& touch)
+{
+}
+
+void ofApp::touchDoubleTap(ofTouchEventArgs& touch)
+{
+}
+
+void ofApp::touchCancelled(ofTouchEventArgs& touch)
+{
+}
+
 void ofApp::windowResized(ofResizeEventArgs& window)
 {
 }
 
-void ofApp::gotMessage(ofMessage message)
+void ofApp::dragged(ofDragInfo& dragged)
 {
 }
 
-void ofApp::dragEvent(ofDragInfo dragged)
+void ofApp::messageReceived(ofMessage& message)
 {
 }

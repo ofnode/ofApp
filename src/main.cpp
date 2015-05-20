@@ -2,6 +2,11 @@
 
 int main()
 {
-  ofSetupOpenGL(1280, 720, OF_WINDOW);
-  ofRunApp(new ofApp);
+  ofGLFWWindowSettings settings;
+
+  auto window = ofCreateWindow(settings);
+  auto app = make_shared<ofApp>();
+  ofRunApp(window, app);
+
+  return ofRunMainLoop();
 }
