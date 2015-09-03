@@ -14,7 +14,7 @@ Change directory to ofApp and perform these steps:
 ```bash
 mkdir build
 cd build
-cmake .. -G Ninja
+cmake .. -G Ninja -DCMAKE_CXX_COMPILER=clang++
 ninja
 ```
 
