@@ -24,4 +24,10 @@ target_link_libraries(
     ${OPENFRAMEWORKS_LIBRARIES}
 )
 
+set_target_properties(
+    ${APP} PROPERTIES
+    MACOSX_BUNDLE_INFO_PLIST
+    "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist.in"
+)
+
 cotire(${APP})
