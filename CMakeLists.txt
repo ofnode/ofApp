@@ -27,7 +27,7 @@ target_link_libraries(
 set_target_properties(
     ${APP} PROPERTIES
     MACOSX_BUNDLE_INFO_PLIST
-    "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist"
 )
 
 cotire(${APP})
