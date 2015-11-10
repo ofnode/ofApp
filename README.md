@@ -18,6 +18,9 @@ cmake .. -G Ninja
 ninja
 ```
 
+Wiki
+----
+
 ### [Compiling ofApp with IDE on Linux](https://github.com/ofnode/of/wiki/Compiling-ofApp-with-IDE-on-Linux)
 
 
