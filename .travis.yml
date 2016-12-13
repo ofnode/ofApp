@@ -44,7 +44,7 @@ matrix:
     env: BUILD_TYPE=Coverage
 
 before_install:
-- travis_wait "./travis/deps.sh"
+- travis_wait -t 30 "./travis/deps.sh"
 
 script:
 - travis_wait "./travis/build.sh"
