@@ -31,4 +31,5 @@ set_target_properties(
     "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist"
 )
 
-cotire(${APP})
+
+# cotire(${APP})
