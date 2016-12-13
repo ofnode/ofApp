@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export OF_ROOT=${PWD}/of
+echo "OF_ROOT: $OF_ROOT"
 
 case "$TRAVIS_OS_NAME" in
   linux)
@@ -10,7 +11,6 @@ case "$TRAVIS_OS_NAME" in
   export CMAKE_BIN=$(which cmake)
   ;;
 esac
-export CTEST_OUTPUT_ON_FAILURE=1
 
 mkdir build-voxelstrack
 cd build-voxelstrack
@@ -19,9 +19,6 @@ case "$TRAVIS_OS_NAME" in
   linux)
     export CC=gcc-6
     export CXX=g++-6
-    export BOOST_ROOT=/opt/boost
-    QT_ENV_SCRIPT=$(find /opt -name 'qt*-env.sh')
-    source $QT_ENV_SCRIPT
     export LD_LIBRARY_PATH="/usr/lib64:$LD_LIBRARY_PATH"
     case "$BUILD_TYPE" in
       Debug)
