@@ -40,5 +40,5 @@ case "$BUILD_TYPE" in
     cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug -DOF_COVERAGE=1 ../of
     ;;
 esac
-ninja &&
+cmake --build . -- -j2
 popd
