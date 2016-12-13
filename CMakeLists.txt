@@ -8,6 +8,8 @@ include(${OF_ROOT}/openFrameworks.cmake)
 
 #ofxaddon()
 
+option(COTIRE "Use cotire" ON)
+
 set(SOURCES
     src/main.cpp
     src/ofApp.cpp
@@ -32,4 +34,6 @@ set_target_properties(
 )
 
 
-# cotire(${APP})
+if (COTIRE)
+    cotire(${APP})
+endif()
