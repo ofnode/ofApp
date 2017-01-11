@@ -31,4 +31,13 @@ set_target_properties(
     "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist"
 )
 
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+    set_target_properties( ${APP} PROPERTIES OUTPUT_NAME "${APP}-Debug")
+endif()
+
+if (CMAKE_CROSSCOMPILING)
+    set_target_properties( ${APP} PROPERTIES OUTPUT_NAME
+      "${APP}-${OF_PLATFORM}-${CMAKE_BUILD_TYPE}")
+endif()
+
 cotire(${APP})
