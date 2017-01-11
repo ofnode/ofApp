@@ -1,0 +1,50 @@
+language: cpp
+
+os:
+  - osx
+  - linux
+
+env:
+  - BUILD_TYPE=Debug
+  - BUILD_TYPE=Release
+
+branches:
+  except:
+    - gh-pages
+
+osx_image: xcode8.2
+dist: trusty
+sudo: required
+
+matrix:
+  exclude:
+    - os: linux
+    - os: osx
+
+  include:
+  - os: linux
+    env: BUILD_TYPE=Debug OF_STATIC=0
+  - os: linux
+    env: BUILD_TYPE=Debug OF_STATIC=1
+  - os: linux
+    env: BUILD_TYPE=Release OF_STATIC=0
+  - os: linux
+    env: BUILD_TYPE=Release OF_STATIC=1
+
+  - os: osx
+    env: BUILD_TYPE=Debug OF_STATIC=0
+  - os: osx
+    env: BUILD_TYPE=Debug OF_STATIC=1
+  - os: osx
+    env: BUILD_TYPE=Release OF_STATIC=0
+  - os: osx
+    env: BUILD_TYPE=Release OF_STATIC=1
+
+  - os: linux
+    env: BUILD_TYPE=Coverage
+
+before_install:
+- travis_wait 30 "./travis/deps.sh"
+
+script:
+- travis_wait 30 "./travis/build.sh"

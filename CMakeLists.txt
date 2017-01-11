@@ -8,6 +8,8 @@ include(${OF_ROOT}/openFrameworks.cmake)
 
 #ofxaddon()
 
+option(COTIRE "Use cotire" ON)
+
 set(SOURCES
     src/main.cpp
     src/ofApp.cpp
@@ -40,4 +42,6 @@ if (CMAKE_CROSSCOMPILING)
       "${APP}-${OF_PLATFORM}-${CMAKE_BUILD_TYPE}")
 endif()
 
-cotire(${APP})
+if (COTIRE)
+    cotire(${APP})
+endif()
