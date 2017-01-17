@@ -1,7 +1,6 @@
 #!/bin/bash
 
 export OF_ROOT=${PWD}/of
-echo "OF_ROOT: $OF_ROOT"
 
 case "$TRAVIS_OS_NAME" in
   linux)
@@ -12,8 +11,8 @@ case "$TRAVIS_OS_NAME" in
   ;;
 esac
 
-mkdir build-voxelstrack
-cd build-voxelstrack
+mkdir build
+cd build
 
 case "$TRAVIS_OS_NAME" in
   linux)
@@ -43,10 +42,7 @@ case "$TRAVIS_OS_NAME" in
   ;;
 
   osx)
-    export QT_PATH=$(dirname $(dirname $(find /usr/local/Cellar/qt5 -name Qt5Config.cmake) ) )
     export CXX=clang++
-    export CMAKE_PREFIX_PATH="$QT_PATH"
-
     export CMAKE_BIN=$(which cmake)
     $CMAKE_BIN -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
                -DOOF_STATIC=$OF_STATIC \
