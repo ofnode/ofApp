@@ -2,7 +2,7 @@
 
 int main()
 {
-  ofGLFWWindowSettings settings;
+  ofGLWindowSettings settings;
 
   auto window = ofCreateWindow(settings);
   auto app = make_shared<ofApp>();
